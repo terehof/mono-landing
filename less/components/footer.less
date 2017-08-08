@@ -1,0 +1,42 @@
+.footer {
+	min-width: 1200px;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 400px;
+		margin: 0 auto;
+		margin-top: 40px;
+		margin-bottom: 50px;
+	}
+
+	&__container img {
+		width: 100%;
+	}
+
+	&__logo-link {
+		display: block;
+		width: 130px;
+	}
+
+	&__info {
+		position: relative;
+		letter-spacing: 0.025em;
+		color: #474a4d;
+		font-size: 18px;
+		line-height: 21px;
+		&::before {
+			position: absolute;
+			content: "";
+			width: 2px;
+			height: 99%;
+			background-color: #e6e6e6;
+			left: -23px;
+		}
+	}
+
+	&__info a {
+		color: #474a4d;
+	}
+}

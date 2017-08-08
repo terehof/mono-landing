@@ -1,0 +1,86 @@
+.benefits {
+	position: relative;
+	min-width: 1200px;
+
+	&__ellips::before {
+		position: absolute;
+		content: "";
+		background-image: url("../img/ellips-left.png");
+		width: 475px;
+		height: 1054px;
+		left: 0;
+		top: -55px;
+	}
+
+	&__ellips::after {
+		position: absolute;
+		content: "";
+		background-image: url("../img/N.png");
+		width: 335px;
+		height: 667px;
+		top: 110px;
+		right: 0;
+		z-index: 0;
+	}
+
+	&__wrap {
+		position: relative;
+		max-width: 965px;
+		margin-left: 530px;
+	}
+
+	&__container-title h2 {
+		font-size: 36px;
+		line-height: 49px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 18px;
+	}
+
+	&__container-title p {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 28px;
+		padding-bottom: 50px;
+	}
+
+
+	&__container-title {
+		color: #474a4d;
+		width: 660px;
+		letter-spacing: 0.025em;
+	}
+
+	&__content-img {
+		height: 74px;
+	}
+
+	&__content h4 {
+		width: 320px;
+		font-size: 16px;
+		line-height: 21px;
+		text-transform: uppercase;
+		padding-bottom: 8px;
+	}
+
+	&__content p {
+		width: 294px;
+		font-size: 16px;
+		line-height: 21px;
+		padding-bottom: 0;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		width: 320px;
+		padding-bottom: 60px;
+	}
+
+	&__container-list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding-bottom: 85px;
+	}
+}

@@ -1,0 +1,169 @@
+.price {
+	min-width: 1200px;
+	position: relative;
+
+	&__ellips::before {
+		position: absolute;
+		content: "";
+		background-image: url("../img/M.png");
+		width: 400px;
+		height: 667px;
+		top: 195px;
+		right: 0;
+		z-index: 0;
+	}
+
+	&__wrap {
+		max-width: 950px;
+		margin: 0 auto;
+		color: #474a4d;
+		letter-spacing: 0.025em;
+	}
+
+	&__container-title {
+		padding-bottom: 145px;
+	}
+
+	&__container-title h2 {
+		width: 870px;
+		margin: 0 auto;
+		font-size: 36px;
+		line-height: 49px;
+		font-weight: 700;
+		padding-bottom: 22px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__container-title p {
+		font-size: 18px;
+		line-height: 28px;
+		width: 615px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	&__container-table {
+		padding-bottom: 290px;
+	}
+
+	&__container-table table {
+		position: relative;
+		width: 100%;
+		border-collapse: collapse;
+		box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15); 
+		border-radius: 6px;
+		&::before {
+			position: absolute;
+			content: "";
+			width: 310px;
+			border: 7px solid #fc4f3e;
+			border-bottom: none;
+			border-top: none;
+			height: 970px;
+			left: 315px;
+			border-image: -moz-linear-gradient(top, rgba(254,127,83,1) 0%, rgba(252,77,61,1) 100%, rgba(252,77,61,1) 100%, rgba(252,77,61,1) 100%, rgba(252,77,61,1) 100%); /* FF3.6-15 */
+		    border-image: -webkit-linear-gradient(top, rgba(254,127,83,1) 0%,rgba(252,77,61,1) 100%,rgba(252,77,61,1) 100%,rgba(252,77,61,1) 100%,rgba(252,77,61,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			border-image: linear-gradient(to bottom, rgba(254,127,83,1) 0%,rgba(252,77,61,1) 100%,rgba(252,77,61,1) 100%,rgba(252,77,61,1) 100%,rgba(252,77,61,1) 100%);
+			border-image-slice: 1;
+		}
+
+		&::after {
+			position: absolute;
+			content: "АКЦИЯ 50%";
+			width: 310px;
+			height: 90px;
+			left: 315px;
+			top: -89px;
+			font-size: 30px;
+			font-weight: 700;
+			text-align: center;
+			padding-top: 27px;
+			color: #fff;
+			background-color: #fe7e53;
+			border-top-left-radius: 6px;
+			border-top-right-radius: 6px;
+		}
+	}
+
+	&__container-table tr {
+		height: 60px;
+	}
+
+	&__container-table tr:nth-child(odd) {
+		background-color: #fff;
+	}
+
+	&__container-table tr:first-child {
+		height: 70px;
+	}
+
+	&__container-table td {
+		width: 315px;
+	}
+
+	&__container-table td:first-child {
+		padding-left: 24px;
+		padding-right: 23px;
+		text-align: left;
+	}
+
+	&__icon {
+		width: 21px;
+		height: 17px;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin: 0 auto;
+	}
+
+	&__gray {
+		background-color: #f8f8f8;
+	}
+
+	&__bold {
+		font-size: 18px;
+		font-weight: 700;
+		text-align: center;
+	}
+
+	&__value {
+		position: relative;
+		&::before {
+			position: absolute;
+			content: "100 000 руб.";
+			top: 5px;
+			left: 115px;
+			font-size: 14px;
+			font-weight: 400;
+			color: #7b7f83;	
+			text-transform: uppercase;
+		}
+		&::after {
+			position: absolute;
+			content: "";
+			width: 80px;
+			height: 14px;
+			border-bottom: 1px solid #fe7e53;;
+			left: 115px;
+			top: 0;
+		}
+	}
+
+	&__link {
+		display: block;
+		width: 310px;
+		font-size: 18px;
+		font-weight: 700;
+		text-align: center;
+		padding-top: 27px;
+		color: #fff;
+		background-color: #fc4e3d;
+		border-bottom-left-radius: 6px;
+		border-bottom-right-radius: 6px;
+		text-transform: uppercase;
+		min-height: 85px;
+		margin: 0 auto;
+		margin-right: 325px;
+		margin-top: -1px;
+	}
+}

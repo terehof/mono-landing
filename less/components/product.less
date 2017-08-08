@@ -1,0 +1,211 @@
+.product {
+	&__wrap {
+		max-width: 964px;
+		margin: 0 auto;
+		padding-top: 38px;
+	}
+
+	#slider-product {
+		position: relative;
+		margin-left: 35px;
+	}
+
+	&__about {
+		display: flex;
+		color: #424242;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-left: 61px;
+		width: 35%;
+	}
+
+	&__info h1 {
+		font-size: 34px;
+		font-weight: 400;
+		margin-bottom: 12px;
+	}
+
+	&__info p {
+		font-size: 16px;
+		letter-spacing: 0.02em;
+	}
+
+	&__info-title img {
+		display: block;
+		margin-right: 10px;
+	}
+
+	&__info-title td {
+		padding-bottom: 15px;
+	}
+
+	&__img img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	&__info-title p {
+		margin-left: -5px;
+	}
+
+	&__info-country table {
+		margin-bottom: -4px;
+	}
+
+	&__info-country p {
+		margin-left: 5px;
+	}
+
+	&__info-country td {
+		padding-top: 17px;
+	}
+
+	.square {
+		width: 13px;
+		height: 13px;
+		margin-left: auto;
+	}
+
+	&__slider {
+		margin-top: 53px;
+		width: 67.946%;
+		letter-spacing: 0.02em;
+	}
+
+	&__slider-wrap {
+		position: relative;
+	}
+
+	&__slider p {
+		font-size: 22px;
+		color: #424242;
+		margin-bottom: 15px;
+	}
+
+	&__btn {
+		position: absolute;
+		background-color: transparent;
+		outline: none;
+		width: 25px;
+		cursor: pointer;
+		top: 40px;
+		z-index: 2;
+	}
+
+	&__btn svg:hover polyline {
+		stroke: #bdbdbd;
+		transition: ease 0.3s;
+	}
+
+	&__btn svg polyline {
+		transition: ease 0.3s;
+	}
+
+	&__btn--prev {
+		left: -10px;
+	}
+
+	&__btn--next {
+		right: -12px;
+	}
+
+	&__slides a {
+		position: relative;
+		display: inline-block;
+		transition: ease 0.3s;
+		&:hover::before {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: rgba(33, 33, 33, 0.65);
+			transition: ease 0.3s;
+
+		}
+	}
+
+	&__goods {
+		width: 67.946%;
+		color: #424242;
+		letter-spacing: 0.02em;
+		margin-bottom: 55px;
+	}
+
+	&__goods td {
+		font-size: 16px;
+		line-height: 30px;
+	}
+
+	&__goods strong {
+		display: block;
+		font-size: 22px;
+		font-weight: 500;
+		margin-top: 55px;
+	}
+
+	&__goods a {
+		color: #424242;
+		border-bottom: 1px solid #636363;
+	}
+
+	&__col-1 {
+		width: 370px;
+		margin-left: -3px;
+		display: block;
+	}
+
+	&__col-3 {
+		width: 15.99%;
+	}
+
+	&__col-2 {
+		width: 14%;
+	}
+
+	&__col-4 {
+		width: 4%;
+	}
+
+	&__col-5 {
+		width: 4%;
+	}
+
+
+	.rub {
+		font-size: 16px;
+		font-family: 'ALSRublRegular';
+	}
+
+	.btn-open-js {
+		position: relative;
+		margin-top: 17px;
+		color: #757575;
+		background-color: transparent;
+		letter-spacing: 0.02em;
+	}
+
+	.btn-open-js::before {
+		position: absolute;
+		content: "";
+		background-image: url("../img/dashed-line-01-base.svg");
+		width: 105px;
+		height: 2px;
+		bottom: -2px;
+	}
+
+	.table-js {
+		display: block;
+		height: 107px;
+		overflow: hidden;
+		transition: height 0.4s ease;
+	}
+
+	.opened {
+	    height: auto;
+	}
+
+}

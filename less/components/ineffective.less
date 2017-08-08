@@ -1,0 +1,95 @@
+.ineffective {
+	position: relative;
+	min-width: 1200px;
+	padding-bottom: 150px;
+
+	&__ellips::before {
+		position: absolute;
+		content: "";
+		background-image: url("../img/ellips-right.png");
+		width: 474px;
+		height: 1054px;
+		right: 0;
+		top: -55px;
+	}
+
+	&__ellips::after {
+		position: absolute;
+		content: "";
+		background-image: url("../img/O.png");
+		width: 410px;
+		height: 690px;
+		top: 110px;
+		left: 0;
+		z-index: 0;
+	}
+
+	&__wrap {
+		position: relative;
+		max-width: 965px;
+		padding: 0 21px;
+		margin-left: 220px;
+	}
+
+	&__container-title {
+		color: #474a4d;
+		width: 623px;
+		letter-spacing: 0.025em;
+	}
+
+	&__container-title h2 {
+		font-size: 36px;
+		line-height: 49px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 18px;
+	}
+
+	&__container-title p {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 28px;
+		padding-bottom: 50px;
+	}
+
+	&__content {
+		width: 294px;
+		padding-bottom: 50px;
+	}
+
+	&__content span {
+		position: relative;
+		display: inline-block;
+		font-size: 48px;
+		font-weight: 700;
+		padding-bottom: 16px;
+		&::before {
+			position: absolute;
+			content: "";
+			width: 99%;
+			height: 2px;
+			background-color: #fc4d3d;
+			bottom: 12px;
+		}
+	}
+
+	&__content h4 {
+		width: 250px;
+		font-size: 16px;
+		line-height: 21px;
+		text-transform: uppercase;
+		padding-bottom: 8px;
+	}
+
+	&__content p {
+		font-size: 16px;
+		line-height: 21px;
+		padding-bottom: 0;
+	}
+
+	&__container-list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}

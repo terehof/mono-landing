@@ -1,0 +1,70 @@
+.offer {
+	position: relative;
+	min-width: 1200px;
+	padding-bottom: 475px;
+
+
+	&__ellips::before {
+		position: absolute;
+		content: "";
+		background-image: url("../img/ellips-left.png");
+		width: 475px;
+		height: 1054px;
+		left: 0;
+		top: -55px;
+	}
+
+	&__ellips::after {
+		position: absolute;
+		content: "";
+		background-image: url("../img/M.png");
+		width: 400px;
+		height: 667px;
+		top: 110px;
+		right: 0;
+		z-index: 0;
+	}
+
+	&__wrap {
+		position: relative;
+		max-width: 965px;
+		padding: 0 21px;
+	}
+
+	&__imgs {
+		position: absolute;
+		background-image: url("../img/image-left.png");
+		width: 648px;
+		height: 610px;
+		background-repeat: no-repeat;
+		top: 115px;
+	}
+
+	&__content {
+		margin-left: auto;
+		color: #474a4d;
+		width: 540px;
+		letter-spacing: 0.025em;
+		padding-top: 270px;
+		z-index: 2;
+		margin-left: 635px;
+	}
+
+	&__content h2 {
+		font-size: 36px;
+		line-height: 49px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 18px;
+	}
+
+	&__content span {
+		color: #fc4d3d;
+	}
+
+	&__content p {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 28px;
+	}
+}

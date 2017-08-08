@@ -1,0 +1,45 @@
+.works {
+	min-width: 1200px;
+	position: relative;
+
+	&__ellips::before {
+		position: absolute;
+		content: "";
+		background-image: url("../img/O.png");
+		width: 410px;
+		height: 690px;
+		top: 240px;
+		left: 0;
+		z-index: 0;
+	}
+
+	&__wrap {
+		max-width: 950px;
+		margin: 0 auto;
+	}
+
+	&__wrap h2 {
+		font-size: 36px;
+		line-height: 49px;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding-bottom: 57px;
+		text-align: center;
+		color: #474a4d;
+	}
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-bottom: 155px;
+	}
+
+	&__content {
+		width: 313px;
+		height: 314px;
+		overflow: hidden;
+		cursor: pointer;
+	}
+}

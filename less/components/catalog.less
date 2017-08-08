@@ -1,0 +1,195 @@
+.catalog {
+	background-color: #f5f5f5;
+
+	&__wrap {
+		max-width: 964px;
+		margin: 0 auto;
+	}
+
+	&__main-title {
+		padding: 27px 0;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__main-title h1 {
+		font-size: 34px;
+		font-weight: 400;
+		color: #424242;
+	}
+
+	.open-filter svg:hover rect {
+		opacity: 0.5;
+		transition: ease 0.3s;
+	}
+
+	&__filter {
+		display: flex;
+		justify-content: space-between;
+		letter-spacing: 0.02em;
+		color: #424242;
+		padding-bottom: 20px;
+	}
+
+	&__material {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__colors {
+		margin-left: 30px;
+	}
+
+	&__material li {
+		position: relative;
+		transition: ease 0.3s;
+		&:hover {
+			transition: ease 0.3s;
+			background-color: #bdbdbd;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			border: 19.5px solid transparent;	
+			border-left: 14px solid #bdbdbd;
+			border-right: 0;
+			right: -14px;
+			opacity: 0;
+			transition: ease 0.3s;
+		}
+
+		&:hover::before {
+			opacity: 1;
+			transition: ease 0.3s;
+		}
+	}
+
+	&__material a {
+		padding: 10px 18px 10px 10px;
+		display: block;
+		color: #212121;
+		font-weight: 500;
+		font-size: 16px;
+	}
+
+	&__colors {
+		display: flex;
+		flex-direction: column;
+	}
+
+	input[type="checkbox"] {
+		display: none;
+	}
+
+	&__content label {
+		display: inline-block;
+		position: relative;
+		cursor: pointer;
+		padding: 10px 35px 10px 30px;
+		-moz-user-select: text;
+		-webkit-user-select: none;
+		font-weight: 400;
+		transition: ease 0.3s;
+		&:hover {
+			background-color: #bdbdbd;
+			transition: ease 0.3s;
+			color: #fff;
+		}
+
+		&:hover::before {
+			content: "";
+			position: absolute;
+			background-repeat: no-repeat;
+			width: 35px;
+			height: 35px;
+			right: 0;
+			top: 0;
+			background-image: url("../img/checkbox-white.svg");
+		}
+	}
+
+	&__content-flags label {
+		padding-left: 40px;
+	}
+
+	&__content-icons label {
+		padding-left: 35px;
+	}
+
+	&__content-condition label {
+		padding-left: 10px;
+	}
+
+	input[type="checkbox"]:checked + label::before {
+		content: "";
+		position: absolute;
+		background-image: url("../img/checkbox.svg");
+		background-repeat: no-repeat;
+		width: 35px;
+		height: 35px;
+		right: 0;
+		top: 0;
+	}
+
+	input[type="checkbox"]:checked + label {
+		font-weight: 500;
+	}
+
+	&__content {
+		position: relative;
+		display: flex;
+		align-items: center;
+		min-height: 41px;
+	}
+
+	.active {
+		background-color: #616161;
+		pointer-events: none;
+		&::before {
+			content: "";
+			position: absolute;
+			border: 19.5px solid transparent;	
+			border-left: 14px solid #616161;
+			border-right: 0;
+			right: -14px;
+			opacity: 1;
+		}
+	}
+
+	.active a {
+		color: #fff;
+	}
+
+	.square {
+		position: absolute;
+		width: 13px;
+		height: 13px;
+		z-index: 2;
+		left: 10px;
+	}
+
+	.flag {
+		position: absolute;
+		width: 24px;
+		height: 16px;
+		background-size: cover;
+		z-index: 2;
+		left: 10px;
+	}
+
+	.icons {
+		position: absolute;
+		z-index: 2;
+		left: 10px;
+	}
+
+	.open-filter {
+		transition: ease 0.5s;
+	}
+
+	.rotate {
+		transform: rotate(180deg);
+		transition: ease 0.5s;
+	}
+}

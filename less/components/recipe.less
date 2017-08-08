@@ -1,0 +1,120 @@
+.recipe {
+	min-width: 1200px;
+
+	&__wrap {
+		max-width: 950px;
+		margin: 0 auto;
+		color: #474a4d;
+		letter-spacing: 0.025em;
+	}
+
+	&__wrap h2 {
+		width: 625px;
+		font-size: 36px;
+		line-height: 49px;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding-bottom: 85px;
+	}
+
+	&__container {
+		padding-bottom: 90px;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 115px;
+	}
+
+	&__content-title {
+		width: 490px;
+	}
+
+	&__content-title h3 {
+		position: relative;
+		font-size: 30px;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding-bottom: 20px;
+		&::before {
+			position: absolute;
+			content: "";
+			width: 53px;
+			height: 2px;
+			background-color: #fc4d3d;
+			bottom: 12px;
+		}
+	}
+
+	&__content-title h4 {
+		font-size: 16px;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding-bottom: 7px;
+	}
+
+	&__content-title p {
+		width: 465px;
+	}
+
+	&__content-img {
+		position: relative;
+		margin-right: 215px;
+	}
+
+	&__content-img--reverse {
+		padding-left: 195px;
+		margin-right: 0;
+	}
+
+	&__letter::before {
+		top: -100px;
+		opacity: 0.05;
+		z-index: -1;
+		font-size: 300px;
+		font-weight: 700;
+	}
+
+	&__letter-o::before {
+		position: absolute;
+		content: "O";
+	}
+
+	&__letter-w::before {
+		position: absolute;
+		content: "W";
+		left: 55px;
+	}
+
+	&__letter-c::before {
+		position: absolute;
+		content: "C";
+		right: -110px;
+	}
+
+	&__content-img img {
+		display: block;
+		z-index: 2;
+	}
+
+	&__letter-d::before {
+		position: absolute;
+		content: "D";
+		left: 95px;
+	}
+
+	&__letter-f::before {
+		position: absolute;
+		content: "F";
+		right: -90px;
+		top: -120px;
+	}
+
+	&__letter-s::before {
+		position: absolute;
+		content: "S";
+		left: 95px;
+	}
+}
