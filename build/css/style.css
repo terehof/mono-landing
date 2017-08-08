@@ -244,7 +244,7 @@ body {
   margin-top: 20px;
 }
 .intro__container h1 {
-  color: #474a4d;
+  color: #000;
   font-size: 94px;
   letter-spacing: 0.025em;
   line-height: 98px;
@@ -365,10 +365,9 @@ body {
   transition: ease 0.3s;
 }
 .intro__more:hover {
-  opacity: 0.65;
+  border: 2px solid #303030;
   transition: ease 0.3s;
-  -webkit-animation: pulse-gray 0.8s 0s ease-out 1;
-          animation: pulse-gray 0.8s 0s ease-out 1;
+  color: #303030;
 }
 .intro__mouse-content {
   overflow: hidden;
@@ -451,22 +450,6 @@ body {
   }
   to {
     box-shadow: 0 0 10px 6px rgba(255, 96, 81, 0), 0 0 4px 60px rgba(255, 96, 81, 0);
-  }
-}
-@-webkit-keyframes pulse-gray {
-  from {
-    box-shadow: 0 0 2px 4px #606060, 0 0 6px 8px #606060;
-  }
-  to {
-    box-shadow: 0 0 10px 6px rgba(147, 147, 147, 0), 0 0 4px 60px rgba(147, 147, 147, 0);
-  }
-}
-@keyframes pulse-gray {
-  from {
-    box-shadow: 0 0 2px 4px #606060, 0 0 6px 8px #606060;
-  }
-  to {
-    box-shadow: 0 0 10px 6px rgba(147, 147, 147, 0), 0 0 4px 60px rgba(147, 147, 147, 0);
   }
 }
 .offer {
@@ -742,6 +725,7 @@ body {
   border-radius: 100px;
   padding: 9px 20px;
   margin-top: 20px;
+  color: #474a4d;
 }
 .application__form-content button {
   position: relative;
@@ -1377,8 +1361,7 @@ body {
   transition: ease 0.3s;
 }
 .order__container a:hover {
-  background-color: #2b2b2b;
-  color: #fff;
+  width: 240px;
   transition: ease 0.3s;
 }
 .footer {
