@@ -97,10 +97,23 @@
 		&:hover::before {
 			opacity: 1;
 		}
+
+		&:hover {
+			animation: pulse-small 0.8s 0s ease-out 1;
+		}
 	}
 
 	&__order span {
 		position: relative;
 		z-index: 3;
 	}
+}
+
+@keyframes pulse-small {
+    from {
+        box-shadow: 0 0 2px 4px #ff6051, 0 0 6px 8px #ff6051;
+    }
+    to {
+        box-shadow: 0 0 10px 6px rgba(255, 96, 81, 0), 0 0 4px 20px rgba(255, 96, 81, 0);
+    }
 }

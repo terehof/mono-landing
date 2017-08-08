@@ -81,7 +81,7 @@
 	&__order {
 		position: relative;
 		display: block;
-		padding: 8px 0;
+		padding: 14px 0;
 		width: 170px;
 		text-align: center;
 		text-transform: uppercase;
@@ -122,6 +122,10 @@
 		&:hover::before {
 			opacity: 1;
 		}
+
+		&:hover {
+			animation: pulse-big 0.8s 0s ease-out 1;
+		}
 	}
 
 	&__order span {
@@ -131,7 +135,7 @@
 
 	&__more {
 		display: block;
-		padding: 8px 0;
+		padding: 12px 0;
 		width: 170px;
 		text-align: center;
 		text-transform: uppercase;
@@ -144,6 +148,7 @@
 		&:hover {
 			opacity: 0.65;
 			transition: ease 0.3s;
+			animation: pulse-gray 0.8s 0s ease-out 1;
 		}
 	}
 
@@ -198,4 +203,22 @@
 	    top: 10px
 	  }
 	}
+}
+
+@keyframes pulse-big {
+    from {
+        box-shadow: 0 0 2px 4px #ff6051, 0 0 6px 8px #ff6051;
+    }
+    to {
+        box-shadow: 0 0 10px 6px rgba(255, 96, 81, 0), 0 0 4px 30px rgba(255, 96, 81, 0);
+    }
+}
+
+@keyframes pulse-gray {
+    from {
+        box-shadow: 0 0 2px 4px #606060, 0 0 6px 8px #606060;
+    }
+    to {
+        box-shadow: 0 0 10px 6px rgba(147,147,147, 0), 0 0 4px 30px rgba(147,147,147, 0);
+    }
 }
