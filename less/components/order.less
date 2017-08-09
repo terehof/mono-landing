@@ -40,6 +40,9 @@
 	}
 
 	&__container a {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%,0);
 		display: block;
 		padding: 17px 0px;
 		text-align: center;
@@ -52,10 +55,11 @@
 		letter-spacing: 0.05em;
 		font-weight: 700;
 		background-color: #fff;
-		transition: ease 0.3s;
+		transition: ease 0.15s;
 		&:hover {
-			width: 240px;
-			transition: ease 0.3s;
+			width: 220px;
+			transition: ease 0.15s;
+			box-shadow: 0 0  0px 10px #fff;
 		}
 	}
 }
