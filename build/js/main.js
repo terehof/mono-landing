@@ -16,7 +16,15 @@ $(function() {
 	  autoplay: true,
 	  autoplaySpeed: 4000,
 	  dots: true
+	});
 
+
+	$('#slider').on('click', '.slick-slide', function (e) {
+		e.stopPropagation();
+		var index = $(this).data("slick-index");
+		if ($('.slick-slider').slick('slickCurrentSlide') !== index) {
+			$('.slick-slider').slick('slickGoTo', index);
+		}
 	});
 
 	$('#scene').parallax({
@@ -153,6 +161,68 @@ $(function() {
 			}, 1000);
 		}
 	});
-
 	/* end Portfolio popup */
+
+	$('[data-fancybox]').fancybox({
+		buttons : [
+			'close'
+		]
+	});
+
+
+	/* start forms */
+	var $formRequest = $('.request-form');
+	if ($formRequest.length > 0) {
+		$('input[name="tel"]').mask('+7(000) 000 00 00');
+		$formRequest.each(function (i, item) {
+			var $form = $(item);
+			validator = $form.validate({
+				rules: {
+					name: {
+						required: true
+					},
+					tel: {
+						required: true
+					}
+				},
+				messages: {
+					name: {
+						required: "Пожалуйста, укажите ваше имя",
+						email: "Укажите E-mail правильно"
+					},
+					tel: {
+						required: "Пожалуйста, укажите ваш телефон"
+					}
+				},
+				submitHandler: function(form) {
+					console.log($(form).serialize());
+					$.ajax({
+						type: "POST",
+						url: "mail.php",
+						data: $(form).serialize()
+					}).done(function(e) {
+						console.log('done');
+						$(form).trigger('reset');
+						$(form).find('.form-message').removeClass('error').addClass('success').html('Спасибо! Мы свяжемся с вами!').fadeIn();
+
+					}).fail(function (e) {
+						console.log('error');
+						$(form).find('.form-message').removeClass('success').addClass('error').html('Произошла ошибка. Попробуйте, позже.').fadeIn();
+					})
+
+				}
+			});
+
+		});
+	}
+	/* end forms */
+
+	$('header.header').scrollToFixed();
+
+	$(window).scroll(function(){
+		var $header = $('header.header'),
+			scroll = $(window).scrollTop();
+		if (scroll >= 100) $header.addClass('gradient');
+		else $header.removeClass('gradient');
+	});
 });

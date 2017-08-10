@@ -133,3 +133,28 @@ body {
         }
     }
 }
+
+label.error {
+    color: #fc4d3d;
+    font-size: 13px;
+}
+input.error {
+    border-color: #fc4d3d !important;
+}
+.request-form {
+    position: relative;
+}
+.form-message {
+    position: absolute;
+    text-align: center;
+    width: 100% !important;
+    left: 0;
+    bottom: -27px;
+    font-size: 15px;
+    &.success {
+        color: green;
+    }
+    &.error {
+        color: #fc4d3d;
+    }
+}
