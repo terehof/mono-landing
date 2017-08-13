@@ -133,7 +133,7 @@ body {
 .popup-project {
   display: none;
   overflow: auto;
-  width: 950px;
+  width: calc(100% - 28px);
   height: calc(100vh - 30px);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -151,6 +151,34 @@ body {
 }
 .popup-project img:first-child {
   margin-top: 0;
+}
+.popup-project::-webkit-scrollbar {
+  width: 0;
+  height: 18px;
+  background: #f3f3f3;
+  cursor: pointer;
+}
+.popup-project::-webkit-scrollbar-thumb {
+  height: 6px;
+  border: 3px solid rgba(255, 255, 255, 0);
+  background-clip: padding-box;
+  -webkit-border-radius: 6px;
+  background-color: #d9d9de;
+  /*-webkit-box-shadow: 0 0 3px rgba(255, 255, 255, 1);*/
+  transition: background 0.25s ease;
+}
+.popup-project::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+.popup-project::-webkit-scrollbar-button:horizontal {
+  width: 0;
+  height: 0;
+  display: none;
+}
+.popup-project::-webkit-scrollbar-corner {
+  background: #f3f3f3;
 }
 label.error {
   color: #fc4d3d;
@@ -324,20 +352,23 @@ input.error {
   top: 0;
   right: 0;
   left: 0;
-  bottom: -27px;
+  bottom: -32px;
   opacity: 0;
   transition: opacity 0.4s ease;
   will-change: opacity;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+45,ffffff+89,ffffff+100&1+0,1+64,0.88+79,0.5+89,0.01+100 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+45,ffffff+89,ffffff+100&1+0,1+56,0.88+70,0.5+83,0.01+100 */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 45%, #ffffff 64%, rgba(255, 255, 255, 0.88) 79%, rgba(255, 255, 255, 0.5) 89%, rgba(255, 255, 255, 0.01) 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 45%, #ffffff 56%, rgba(255, 255, 255, 0.88) 70%, rgba(255, 255, 255, 0.5) 83%, rgba(255, 255, 255, 0.33) 89%, rgba(255, 255, 255, 0.01) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#03ffffff', GradientType=0);
   /* IE6-9 */
 }
+.header.scroll-to-fixed-fixed + div {
+  margin-bottom: 90px;
+}
 .header.gradient:before {
-  opacity: 1;
+  opacity: 0.9;
 }
 .header.gradient .header__wrap {
   padding-top: 12px;
