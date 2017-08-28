@@ -180,6 +180,11 @@ body {
 .popup-project::-webkit-scrollbar-corner {
   background: #f3f3f3;
 }
+.popup-project-iframe iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 label.error {
   color: #fc4d3d;
   font-size: 13px;
@@ -240,8 +245,8 @@ input.error {
 }
 .header__img a {
   display: block;
-  width: 130px;
-  height: 41px;
+  width: 197px;
+  height: 36px;
 }
 .header__img a img {
   display: block;

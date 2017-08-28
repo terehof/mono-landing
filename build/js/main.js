@@ -118,26 +118,31 @@ $(function() {
 		$popupBg.fadeIn(700);
 		$popupClose.fadeIn(700);
 
-
-		if ( $('.popup-project[data-project="'+ project +'"]').is(':empty') ) {
-			function showAll() {
-				for (var i = 1; i < portfolioCases[project].length; i++) {
-					var imageSrc = portfolioCases[project][i];
-					$('.popup-project[data-project="'+ project +'"]').append('<img src="'+ imageSrc +'">').show(function () {
-						$(this).css('opacity', 1);
-					});
+		if (!$this.attr('data-iframe')) {
+			if ( $('.popup-project[data-project="'+ project +'"]').is(':empty') ) {
+				function showAll() {
+					for (var i = 1; i < portfolioCases[project].length; i++) {
+						var imageSrc = portfolioCases[project][i];
+						$('.popup-project[data-project="'+ project +'"]').append('<img src="'+ imageSrc +'">').show(function () {
+							$(this).css('opacity', 1);
+						});
+					}
 				}
+				function showFirst() {
+					var imageSrc = portfolioCases[project][0];
+					var img = new Image();
+					img.onload = function() {
+						$('.popup-project[data-project="'+ project +'"]').html('<img src="'+ imageSrc +'">');
+						showAll();
+					};
+					img.src = imageSrc;
+				}
+				showFirst();
+			} else {
+				$('.popup-project[data-project="'+ project +'"]').show(function () {
+					$(this).css('opacity', 1);
+				});
 			}
-			function showFirst() {
-				var imageSrc = portfolioCases[project][0];
-				var img = new Image();
-				img.onload = function() {
-					$('.popup-project[data-project="'+ project +'"]').html('<img src="'+ imageSrc +'">');
-					showAll();
-				};
-				img.src = imageSrc;
-			}
-			showFirst();
 		} else {
 			$('.popup-project[data-project="'+ project +'"]').show(function () {
 				$(this).css('opacity', 1);
@@ -156,7 +161,7 @@ $(function() {
 			$popupProject.css('opacity', 0);
 			setTimeout(function () {
 				$('.popup-project').fadeOut(function () {
-					$('.popup-project').html('');
+					$('.popup-project:not(.popup-project-iframe)').html('');
 				})
 			}, 1000);
 		}
@@ -195,18 +200,15 @@ $(function() {
 					}
 				},
 				submitHandler: function(form) {
-					console.log($(form).serialize());
 					$.ajax({
 						type: "POST",
 						url: "mail.php",
 						data: $(form).serialize()
 					}).done(function(e) {
-						console.log('done');
 						$(form).trigger('reset');
 						$(form).find('.form-message').removeClass('error').addClass('success').html('Спасибо! Мы свяжемся с вами!').fadeIn();
 
 					}).fail(function (e) {
-						console.log('error');
 						$(form).find('.form-message').removeClass('success').addClass('error').html('Произошла ошибка. Попробуйте, позже.').fadeIn();
 					})
 
