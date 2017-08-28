@@ -219,6 +219,7 @@ input.error {
 }
 .header {
   margin-bottom: 90px;
+  min-width: 1200px;
 }
 .header__wrap {
   position: relative;
@@ -229,9 +230,7 @@ input.error {
           justify-content: space-between;
   -webkit-box-align: center;
           align-items: center;
-  max-width: 1402px;
-  margin: 0 auto;
-  padding: 0 21px;
+  padding: 0 35px;
   padding-top: 30px;
   transition: padding 0.4s ease;
   will-change: padding;
@@ -250,9 +249,9 @@ input.error {
   height: 100%;
 }
 .header__nav {
-  width: 47.453%;
+  width: 620px;
   z-index: 10;
-  margin-left: 60px;
+  margin: 0 auto;
 }
 .header__nav ul {
   display: -webkit-box;
@@ -1537,7 +1536,13 @@ input.error {
   margin-bottom: 25px;
 }
 .reviews__slides a {
-  display: block;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fc5340;
+}
+.reviews__link {
+  display: inline-block;
   font-size: 14px;
   font-weight: 700;
   color: #fc5340;
